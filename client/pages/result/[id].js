@@ -17,7 +17,7 @@ export default function Result () {
   useEffect(async () => {
     if (!router.isReady) return;
     const {id} = router.query
-    const url = `http://localhost:3000/api/result/${id}`
+    const url = `http://valley.sehyeondev.com/api/result/${id}`
     // const url = "http://valley.sehyeondev.com/"
     const rawResponse = await fetch(url, {
       method: 'GET',
@@ -137,7 +137,7 @@ const AnswerWrapper = ({answerObjArray, question}) => {
   return (
     answerObjArray.map((answer, index) => {
       return (
-        <Box>
+        <Box key={index}>
           <Answer answer={answer} question={question} />
         </Box>
       )
@@ -167,7 +167,8 @@ const Answer = ({answer, question}) => {
         {
             answer.FormQuestionAnswerOptions.map((option, index) => {
             return (
-              <Box sx={{
+              <Box key={index} 
+                sx={{
                 width: '432px',
                 height: '24px',
                 m: '10px',
