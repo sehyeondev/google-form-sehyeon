@@ -12,13 +12,15 @@
     "password": "rlatpgus",
     "database": "form_database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port" : 3307
   },
   "production": {
     "username": "root",
     "password": "rlatpgus",
     "database": "form_database_prod",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port" : 3307
   }
 }
